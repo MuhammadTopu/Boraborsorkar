@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Navbar } from './components/navbar';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,23 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <title>Borabor Sorkar</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+          {/* <Navbar/> */}
+          <div className="text-center text-5xl font-bold">
+      <span className="text-red-500">Borabor</span>{" "}
+      <span className="text-green-500">Sorkar</span>
+    </div>
+        </header>
         {children}
+        <footer className="mt-[102px]">
+ <div className="h-[50px] w-[100000] bg-lime-300 text-center">
+    <h3>All rights reserved by</h3> <span>Borabor</span> <span>Sorkar</span>
+ </div>
+        </footer>
       </body>
     </html>
   );
